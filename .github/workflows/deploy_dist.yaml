@@ -1,8 +1,11 @@
 name: Deploy dist
 on: push
 jobs:
-  run: |
-    echo "Cloning repo"
-    echo "${{github.repository}}"
-    git clone https://github.com/${{github.repository}}.git myfiles
-    cd myfiles && ls
+  test: 
+    runs-on: ubuntu-latest
+    steps:
+      run: |
+        echo "Cloning repo"
+        echo "${{github.repository}}"
+        git clone https://github.com/${{github.repository}}.git myfiles
+        cd myfiles && ls
