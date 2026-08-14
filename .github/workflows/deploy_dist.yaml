@@ -12,7 +12,7 @@ jobs:
               #   git clone https://github.com/${{github.repository}}.git myfiles
               #   cd myfiles && ls
             - name: Install nodejs
-              users: actions/setup-node@v3
+              uses: actions/setup-node@v3
               with:
                   node-version: 22
             - name: Print nodejs version
